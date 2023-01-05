@@ -24,7 +24,7 @@ public class SphereManager : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
 
-        _hitPos = (transform.position.y - other.gameObject.transform.position.y) / 8;
+        _hitPos = (transform.position.y - other.gameObject.transform.position.y) / 5;
         if(other.gameObject.CompareTag("Player"))
         {
         _dir = new Vector3(1,_hitPos,0).normalized;
