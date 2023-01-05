@@ -5,9 +5,14 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Ball spawning")]
+    [Tooltip("Prefab de balle")]
     [SerializeField] GameObject _ball;
+    [Tooltip("Point de spawn")]
     [SerializeField] GameObject _spawn;
+    [Tooltip("Texte du score du player 1")]
     [SerializeField] TMP_Text _scoreDisplay1;
+    [Tooltip("Texte du score du player 2")]
     [SerializeField] TMP_Text _scoreDisplay2;
     public int scoreP1;
     public int scoreP2;

@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class MoveCube : MonoBehaviour
 {
+    [Header("Parametre de mouvement du cube")]
+    [Tooltip("Vitesse de déplacement")]
+
     [SerializeField] float speed;
+    [Tooltip("limite de déplacement")]
+
     [SerializeField] float distance;
     int destination;
 

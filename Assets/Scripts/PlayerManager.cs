@@ -7,6 +7,9 @@ public class PlayerManager : MonoBehaviour
 {
     //[SerializeField] InputActionReference _actionUp;
     //[SerializeField] InputActionReference _actionDown;
+    [Header("Vitesse de deplacement du player")]
+    [Tooltip("float: Vitesse de déplacement du player")]
+
     [SerializeField] float _moveSpeed;
 
     private float verticalInput;

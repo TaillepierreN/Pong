@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TriggerManager : MonoBehaviour
 {
+    [Header("GameManager")]
+    [Tooltip("GameManager gameObject")]
+
     [SerializeField] GameManager _gm;
     private void OnTriggerEnter(Collider other)
     {
