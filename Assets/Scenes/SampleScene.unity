@@ -1524,7 +1524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494050184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.78, y: 0.8669114, z: 14.72}
+  m_LocalPosition: {x: -17.78, y: 2.27, z: 14.72}
   m_LocalScale: {x: 1, y: 5, z: 17}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2008,10 +2008,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ball: {fileID: 3403517852383112918, guid: 13287565da37930448b4e77e5cfe7992, type: 3}
   _spawn: {fileID: 502328041}
-  scoreP1: 0
-  scoreP2: 0
   _scoreDisplay1: {fileID: 4317276}
   _scoreDisplay2: {fileID: 1421151453}
+  scoreP1: 0
+  scoreP2: 0
 --- !u!4 &761951200
 Transform:
   m_ObjectHideFlags: 0
