@@ -10,42 +10,48 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] float _moveSpeed;
 
     private float verticalInput;
-    // Start is called before the first frame update
     void Start()
     {
+        //tried to use new input system,but failed miserably
         //  _actionUp.action.Enable();
         //  _actionDown.action.Enable();
         //  _actionUp.action.performed -= MoveUp;
         //  _actionDown.action.performed -= MoveUp;
     }
 
-    // Update is called once per frame
     void Update()
     {
-         verticalInput = Input.GetAxis("Vertical");
-         if(gameObject.CompareTag("Player"))
-         {
-         transform.Translate(Vector3.up * Time.deltaTime* _moveSpeed * verticalInput );
-         } else
-         {
-            if(Input.GetKey(KeyCode.Keypad5))
+        //get vertical input and if script is applied to the gameObject tagged"Player", move the 
+        //gameObject
+        verticalInput = Input.GetAxis("Vertical");
+        if (gameObject.CompareTag("Player"))
+        {
+            transform.Translate(Vector3.up * Time.deltaTime * _moveSpeed * verticalInput);
+        }
+        else
+        //if the gameObject is not tagged "Player", it moves the second player with key 8 and 5 from
+        // keypad
+        {
+            if (Input.GetKey(KeyCode.Keypad5))
             {
-                transform.Translate(Vector3.down *  Time.deltaTime * _moveSpeed);   
+                transform.Translate(Vector3.down * Time.deltaTime * _moveSpeed);
             }
-            if(Input.GetKey(KeyCode.Keypad8))
+            if (Input.GetKey(KeyCode.Keypad8))
             {
-                transform.Translate(Vector3.up * Time.deltaTime* _moveSpeed);
+                transform.Translate(Vector3.up * Time.deltaTime * _moveSpeed);
             }
-         }
-         if(transform.position.y > 11)
-         {
-            transform.position = new Vector3(transform.position.x,11,transform.position.z);
-         }
-         if(transform.position.y < -3.70f)
-         {
-            transform.position = new Vector3(transform.position.x,-3.70f,transform.position.z);
-         }
+        }
+        //place boundaries for player not to go too for up or down
+        if (transform.position.y > 12f)
+        {
+            transform.position = new Vector3(transform.position.x, 12f, transform.position.z);
+        }
+        if (transform.position.y < -5f)
+        {
+            transform.position = new Vector3(transform.position.x, -5f, transform.position.z);
+        }
     }
+    //other part of the failed attempt at new input system
     //  public void MoveUp(InputAction.CallbackContext obj)
     //  {
     //      Debug.Log("up");

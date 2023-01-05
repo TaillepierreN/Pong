@@ -5,22 +5,13 @@ using UnityEngine;
 public class TriggerManager : MonoBehaviour
 {
     [SerializeField] GameManager _gm;
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnTriggerEnter(Collider other) {
+        //when the ball get into a goal,destroy the ball and call the score up function in the game manager
         Destroy(other.gameObject);
-        if(gameObject.CompareTag("TriggerLeft"))
-        _gm.ScoredP1();
+        if (gameObject.CompareTag("TriggerLeft"))
+            _gm.ScoredP1();
         else
-        _gm.ScoredP2();
+            _gm.ScoredP2();
     }
 }
