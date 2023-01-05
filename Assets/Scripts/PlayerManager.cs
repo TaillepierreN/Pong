@@ -10,14 +10,6 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] float _moveSpeed;
 
     private float verticalInput;
-    void Start()
-    {
-        //tried to use new input system,but failed miserably
-        //  _actionUp.action.Enable();
-        //  _actionDown.action.Enable();
-        //  _actionUp.action.performed -= MoveUp;
-        //  _actionDown.action.performed -= MoveUp;
-    }
 
     void Update()
     {
@@ -51,16 +43,25 @@ public class PlayerManager : MonoBehaviour
             transform.position = new Vector3(transform.position.x, -5f, transform.position.z);
         }
     }
-    //other part of the failed attempt at new input system
-    //  public void MoveUp(InputAction.CallbackContext obj)
-    //  {
-    //      Debug.Log("up");
-    //      transform.Translate(new Vector3(0,1,0) * _moveSpeed * Time.deltaTime);
-    //  }
-    //      public void MoveDown(InputAction.CallbackContext obj)
-    //  {
-    //      Debug.Log("down");
+    /*
+    tried to use new input system, but failed miserably
+    void Start()
+    {
 
-    //      transform.Translate(new Vector3(0,-1,0) * _moveSpeed * Time.deltaTime);
-    //  }
+        _actionUp.action.Enable();
+        _actionDown.action.Enable();
+        _actionUp.action.performed -= MoveUp;
+        _actionDown.action.performed -= MoveUp;
+    }
+    public void MoveUp(InputAction.CallbackContext obj)
+    {
+        Debug.Log("up");
+        transform.Translate(new Vector3(0, 1, 0) * _moveSpeed * Time.deltaTime);
+    }
+    public void MoveDown(InputAction.CallbackContext obj)
+    {
+        Debug.Log("down");
+        transform.Translate(new Vector3(0, -1, 0) * _moveSpeed * Time.deltaTime);
+    }
+    */
 }
